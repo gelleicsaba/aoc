@@ -214,7 +214,9 @@ console.log("Num of routes: ",q6.length)
 
 // get the minimum distance of the routes
 let min = 9999999999
+let max = 0
 let path=""
+let pathmax=""
 for (let x=0; x<q6.length; ++x) {
     const row=q6[x]
     let dst = 0
@@ -226,10 +228,15 @@ for (let x=0; x<q6.length; ++x) {
         min = dst
         path = q6[x]
     }
+    if (dst > max) {
+        max = dst
+        pathmax = q6[x]
+    }
 }
 
 // in addition we print the route (info)
 let sb=""
+let sbmax=""
 for (let x=0;x<path.length; ++x) {
     const c=path.charAt(x)
     if (x==0) {
@@ -238,6 +245,17 @@ for (let x=0;x<path.length; ++x) {
         sb+=`->${alsv[c]}`
     }
 }
-console.log("Path: ",sb)
+for (let x=0;x<pathmax.length; ++x) {
+    const c=pathmax.charAt(x)
+    if (x==0) {
+        sbmax+=alsv[c]
+    } else {
+        sbmax+=`->${alsv[c]}`
+    }
+}
+console.log("Path A: ",sb)
 console.log("A: ", min)
+
+console.log("Path B: ",sbmax)
+console.log("B: ", max)
 
