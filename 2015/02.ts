@@ -59,4 +59,4 @@ for (let d of data) {
 }
 
 console.log("A:",resultA)
-console.log("A:",resultB)
+console.log("B:",resultB)
