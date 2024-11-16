@@ -49,7 +49,7 @@ const permutations = (arr: string[]) => {
     )
 }
 
-let perms: any[] = permutations(tb)
+let perms: any[] = permutations(tb) // permutations of seats
 
 const calc = () => {
     let _max=0
@@ -80,4 +80,7 @@ for (let x in al) {
     xpa[`${me}${al[x]}`] = 0
     xpa[`${al[x]}${me}`] = 0
 }
-//console.log(xpa)
+tb.push(me)
+perms = permutations(tb)
+
+console.log("B: ",calc())
