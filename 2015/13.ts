@@ -1,6 +1,7 @@
 export {}
 
 import { input } from "./13data"
+import { permutations, ABC } from "./lib/aoclib"
 
 let _input = input.replaceAll(".","").replaceAll("\r","").split("\n")
 
@@ -14,7 +15,6 @@ for (let x=0; x<_input.length; ++x) {
     xp.push({person: person, to: to, point: point})
 }
 
-const ABC="ABCDEFGHIJ"
 const al = {} // aliases
 let n=0
 let tb: string[] =[]
@@ -33,20 +33,6 @@ for (let x=0; x<xp.length; ++x) {
     const a = al[xp[x].person]
     const b = al[xp[x].to]
     xpa[`${a}${b}`] = xp[x].point
-}
-
-const permutations = (arr: string[]) => {
-    if (arr.length <= 2) return arr.length === 2 ? [arr, [arr[1], arr[0]]] : arr;
-    return arr.reduce(
-        (acc, item, i) =>
-        acc.concat(
-            permutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map((val) => [
-            item,
-            ...val,
-            ])
-        ),
-        []
-    )
 }
 
 let perms: any[] = permutations(tb) // permutations of seats

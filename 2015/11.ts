@@ -1,5 +1,7 @@
 export {}
 import cloneDeep from 'clone-deep'
+import { ABC } from './lib/aoclib'
+
 const input=`vzbxkghb`
 const test1=`abcdefgh`
 
@@ -28,7 +30,7 @@ Given Santa's current password (your puzzle input), what should his next passwor
 
 let wa = false
 
-const AB = "abcdefghijklmnopqrstuvwxyz"
+const AB = ABC.toLowerCase()
 
 const addChar = (ch :string) => {
     const n = (AB.indexOf(ch)+1) % AB.length
