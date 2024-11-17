@@ -64,30 +64,30 @@ for (let x in prs) {
 }
 
 while (csec < TOTAL) {
-    let dones=0
     let cw = 0
     for (let x in prs) {
         const el = prs[x]
-        if (el.secs <= TOTAL) {
 
-            if (el.waitsec > 0) {
-                -- el.waitsec
-                if (el.waitsec <= 0) {
-                    el.flysec = el.sec
-                    el.waitsec = 0
-                }
-            } else {
-                el.dist += el.fly
-                -- el.flysec
-                if (el.flysec <= 0) {
-                    el.flysec = 0
-                    el.waitsec = el.rest
-                }
+        if (el.waitsec > 0) {
+            -- el.waitsec
+            if (el.waitsec <= 0) {
+                el.flysec = el.sec
+                el.waitsec = 0
+            }
+        } else {
+            el.dist += el.fly
+            -- el.flysec
+            if (el.flysec <= 0) {
+                el.flysec = 0
+                el.waitsec = el.rest
             }
         }
+
         if (el.dist > cw) {
             cw = el.dist
         }
+
+        el.secs = csec // not used
     }
     const winners = prs.filter(q => q.dist == cw)
     for (let x of winners) {
