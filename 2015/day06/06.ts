@@ -1,4 +1,3 @@
-export {}
 import { input } from "./06data"
 let leds: Array<any> = Array(1000)
 for (let x=0; x<1000; ++x) {

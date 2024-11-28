@@ -1,4 +1,3 @@
-export {}
 import { input } from './05data'
 
 let _inputs: Array<string> = input.replaceAll("\r","").split("\n")

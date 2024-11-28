@@ -1,7 +1,5 @@
-export {}
-
 import { input } from "./13data"
-import { permutations, ABC } from "./lib/aoclib"
+import { permutations, ABC } from "../lib/aoclib"
 
 let _input = input.replaceAll(".","").replaceAll("\r","").split("\n")
 

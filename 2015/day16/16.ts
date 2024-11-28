@@ -1,5 +1,3 @@
-export {}
-
 import { input } from './16data'
 
 const _input = input.replaceAll("Sue","Sue,").replaceAll(":",",").replaceAll("\r","").split("\n")

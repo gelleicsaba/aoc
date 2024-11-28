@@ -1,4 +1,3 @@
-export {}
 export const input =
 `uxcplgxnkwbdwhrp
 suerykeptdsutidb

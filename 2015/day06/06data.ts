@@ -1,4 +1,3 @@
-export {}
 export const input =
 `turn on 887,9 through 959,629
 turn on 454,398 through 844,448

@@ -1,4 +1,3 @@
-export {}
 import { input } from './02data'
 
 const sqFeet = (l: number, w: number, h: number) => {

@@ -1,5 +1,3 @@
-export {}
-
 import { input } from './18data'
 import cloneDeep from 'clone-deep'
 

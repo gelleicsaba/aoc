@@ -1,4 +1,3 @@
-export {}
 import { input } from './12data'
 
 const NUM = "0123456789-"

@@ -1,5 +1,3 @@
-export {}
-
 import { input } from './17data'
 
 console.log("Start...")

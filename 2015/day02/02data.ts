@@ -1,4 +1,3 @@
-export {}
 export const input: string =
 `3x11x24
 13x5x19

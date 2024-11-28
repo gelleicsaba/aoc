@@ -1,4 +1,3 @@
-export {}
 import { input } from './15data'
 
 const test =
