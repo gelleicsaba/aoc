@@ -2216,3 +2216,16 @@
 2015/node_modules/undici-types/util.d.ts
 2015/node_modules/undici-types/webidl.d.ts
 2015/node_modules/undici-types/websocket.d.ts
+2015/node_modules/typescript/lib/_tsc.js
+2015/node_modules/typescript/lib/_tsserver.js
+2015/node_modules/typescript/lib/_typingsInstaller.js
+2015/node_modules/typescript/lib/lib.es2017.arraybuffer.d.ts
+2015/node_modules/typescript/lib/lib.es2024.arraybuffer.d.ts
+2015/node_modules/typescript/lib/lib.es2024.collection.d.ts
+2015/node_modules/typescript/lib/lib.es2024.d.ts
+2015/node_modules/typescript/lib/lib.es2024.full.d.ts
+2015/node_modules/typescript/lib/lib.es2024.object.d.ts
+2015/node_modules/typescript/lib/lib.es2024.promise.d.ts
+2015/node_modules/typescript/lib/lib.es2024.regexp.d.ts
+2015/node_modules/typescript/lib/lib.es2024.sharedmemory.d.ts
+2015/node_modules/typescript/lib/lib.es2024.string.d.ts
