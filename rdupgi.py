@@ -8,10 +8,10 @@ def main():
         print("")
         print("Usage:")
         print("  python3 rdupgi <.gitignore path>\n")
-        sys,exit(0)
+        return
     if not sys.argv[1].endswith(".gitignore"):
         print("  ERR: File must be a .gitignore!\n")
-        sys,exit(-1)
+        return
     print("Reading..")
     with open(sys.argv[1]) as f:
         lines = f.readlines()
