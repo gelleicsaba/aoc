@@ -1,5 +1,3 @@
-export {}
-
 import { input } from './04data'
 
 const testA =

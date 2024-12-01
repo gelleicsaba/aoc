@@ -1,4 +1,3 @@
-export {}
 export const input =
 `  775  785  361
   622  375  125

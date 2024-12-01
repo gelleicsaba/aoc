@@ -1,4 +1,3 @@
-export {}
 export const input =
 `Game 1: 7 green, 14 red, 5 blue; 8 red, 4 green; 6 green, 18 red, 9 blue
 Game 2: 3 blue, 15 red, 5 green; 1 blue, 14 red, 5 green; 11 red; 4 green, 1 blue, 3 red; 4 green, 1 blue; 10 red, 1 green

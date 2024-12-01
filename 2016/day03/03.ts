@@ -1,4 +1,3 @@
-export {}
 import { input } from './03data'
 
 const _input = input.replaceAll("\r","").split("\n")

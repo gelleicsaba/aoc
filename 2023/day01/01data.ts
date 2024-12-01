@@ -1,4 +1,3 @@
-export {}
 export const input =
 `9vxfg
 19qdlpmdrxone7sevennine

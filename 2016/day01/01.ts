@@ -1,4 +1,3 @@
-export {}
 import { input } from './01data'
 
 //const test = `R5, L5, R5, R3`

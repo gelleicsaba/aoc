@@ -1,4 +1,3 @@
-export {}
 export const input =
 `15-19 k: kkkkkkkkkkkkzkkkkkkk
 1-11 s: sbssswsqsssssrlss
