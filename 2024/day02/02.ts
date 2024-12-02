@@ -27,16 +27,8 @@ for (let numbers of lis) {
     sum += testList(numbers)?1:0
 }
 console.log(`A: ${sum}`)
-const removeItem = (arr: number[], index: number) => {
-    let newArr: number[] = Array(arr.length-1)
-    let y=0
-    for (let x=0;x<arr.length;++x) {
-        if (index != x) {
-            newArr[y] = arr[x]
-            ++y
-        }
-    }
-    return newArr
+const removeItem = (arr: any[], idx: number) => {
+    return arr.slice(0,idx).concat(arr.slice(idx+1))
 }
 sum = 0
 for (let numbers of lis) {
