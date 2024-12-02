@@ -27,10 +27,10 @@ const calc = () => {
         const head = sections[0].trim().split(" ")
         const parts = sections[1].trim().split(" | ")
         const winners = parts[0].trim().split(" ")
-        const nums = parts[1].trim().split(" ")
+        const numbers = parts[1].trim().split(" ")
         let count = 0
         for (let d of winners) {
-            for (let c of nums) {
+            for (let c of numbers) {
                 if (d == c) {
                     ++count
                 }
@@ -56,10 +56,10 @@ const calcB = () => {
         const head = sections[0].trim().split(" ")
         const parts = sections[1].trim().split(" | ")
         const winners = parts[0].trim().split(" ")
-        const nums = parts[1].trim().split(" ")
+        const numbers = parts[1].trim().split(" ")
         let count = 0
         for (let d of winners) {
-            for (let c of nums) {
+            for (let c of numbers) {
                 if (d == c) {
                     ++count
                 }

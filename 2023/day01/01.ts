@@ -18,7 +18,7 @@ zoneight234
 */
 
 let _input = input.replaceAll("\r","").split("\n")
-const nums = "0123456789"
+const numbers = "0123456789"
 
 let result = 0
 const calc = () => {
@@ -27,10 +27,10 @@ const calc = () => {
         let l = -1
         let y = r.length-1
         for (let x = 0; x < r.length; ++x) {
-            if (f == -1 && nums.includes(r.charAt(x))) {
+            if (f == -1 && numbers.includes(r.charAt(x))) {
                 f = parseInt(r.charAt(x))
             }
-            if (l == -1 && nums.includes(r.charAt(y))) {
+            if (l == -1 && numbers.includes(r.charAt(y))) {
                 l = parseInt(r.charAt(y))
             }
             if (f!=-1 && l!=-1) {

@@ -4,7 +4,7 @@ const NUM = "0123456789-"
 let _input = input + '_'
 
 const calc = () => {
-    let numStr = ""
+    let numberstr = ""
     let str = false
     let numbers: number[] = []
     for (let x=0; x<_input.length; ++x) {
@@ -14,11 +14,11 @@ const calc = () => {
         }
         if (!str) {
             if (NUM.includes(ch)) {
-                numStr += ch
+                numberstr += ch
             } else {
-                if (numStr != "") {
-                    numbers.push(parseInt(numStr))
-                    numStr = ""
+                if (numberstr != "") {
+                    numbers.push(parseInt(numberstr))
+                    numberstr = ""
                 }
             }
         }

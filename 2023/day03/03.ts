@@ -120,7 +120,7 @@ const hasgear = (_x: number, _y: number): boolean => {
 }
 
 // put numbers and positions
-let grnums = Array(0)
+let grnumbers = Array(0)
 let grs = Array(0)
 for (let y = 1; y < _input.length-1; ++y) {
     let mode = false
@@ -135,7 +135,7 @@ for (let y = 1; y < _input.length-1; ++y) {
             mode = true
         } else if (mode && !NUM.includes(_input[y].charAt(x)))  {
             if (hasAGear) {
-                grnums.push([parseInt(num), num.length, coords])
+                grnumbers.push([parseInt(num), num.length, coords])
             }
             mode = false
             num = ""
@@ -149,7 +149,7 @@ for (let y = 1; y < _input.length-1; ++y) {
             // if this is a last character
             if (x == _input[y].length-2) {
                 if (hasAGear) {
-                    grnums.push([parseInt(num), num.length, coords])
+                    grnumbers.push([parseInt(num), num.length, coords])
                 }
             }
 
@@ -170,12 +170,12 @@ const pairs = {}
 for (let g = 0; g < grs.length; ++g) {
     console.log("g:",g)
     const gear = grs[g]
-    for (let a = 0; a < grnums.length; ++a) {
-        for (let b = 0; b < grnums.length; ++b) {
+    for (let a = 0; a < grnumbers.length; ++a) {
+        for (let b = 0; b < grnumbers.length; ++b) {
             if (a==b) continue
             if (pairs[`${a}|${b}`] || pairs[`${b}|${a}`]) continue
-            const an = grnums[a]
-            const bn = grnums[b]
+            const an = grnumbers[a]
+            const bn = grnumbers[b]
             const grx = gear[0]
             const gry = gear[1]
             const anb =

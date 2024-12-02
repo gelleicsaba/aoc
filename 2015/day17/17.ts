@@ -4,7 +4,7 @@ console.log("Start...")
 const _input: number[] = input.replaceAll("\r","").split("\n").map(q => parseInt(q))
 
 let rnd = 0
-let nums: number[] = []
+let numbers: number[] = []
 let cmb = {}
 
 
@@ -14,22 +14,22 @@ const end = start + (30*1000)
 let tm = Date.now()
 let thick = 0
 while (tm <= end) {
-    nums = []
+    numbers = []
     let sum = 0
     for (let x=0; x<_input.length && sum < 150;++x) {
         let done = false
         while (!done && sum<=150) {
             rnd = Math.trunc(Math.random() * _input.length)
-            done = nums.filter(q => q == rnd).length == 0
+            done = numbers.filter(q => q == rnd).length == 0
         }
-        nums.push(rnd)
+        numbers.push(rnd)
         sum += _input[rnd]
     }
     if (sum == 150) {
-        nums = nums.sort()
-        const key = nums.join("|")
+        numbers = numbers.sort()
+        const key = numbers.join("|")
         if (!cmb[key]) {
-            cmb[key]=nums.length
+            cmb[key]=numbers.length
         }
     }
     tm = Date.now()

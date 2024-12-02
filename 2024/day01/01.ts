@@ -1,6 +1,6 @@
 import { input } from './01data'
 import cloneDeep from 'clonedeep'
-const mutate = (v) => v.replaceAll("\r","").replaceAll("  "," ").replaceAll("  "," ").replaceAll(" ", ",").split("\n")
+const mutate = (v: string) => v.replaceAll("\r","").replaceAll("  "," ").replaceAll("  "," ").replaceAll(" ", ",").split("\n")
 // const test =
 // `3   4
 // 4   3
