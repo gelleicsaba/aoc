@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Lib namespace="lib.numbers.fractional">
+	<Regex name="Money" alias="money"><Raw>([0-9,]+(\.[0-9]{1,2}){0,1})</Raw></Regex>
+	<Regex name="MoneyFixed4" alias="money-fixed-4"><Raw>([0-9,]+(\.[0-9]{1,4}){0,1})</Raw></Regex>
+	<Regex name="MoneyFixed3" alias="money-fixed-3"><Raw>([0-9,]+(\.[0-9]{1,3}){0,1})</Raw></Regex>
+	<Regex name="Fractional" alias="fractional"><Raw>([0-9,]+(\.[0-9]+){0,1})</Raw></Regex>
+
+	<Regex name="Money" alias="money" lang="de"><Raw>([0-9\.]+(,[0-9]{1,2}){0,1})</Raw></Regex>
+	<Regex name="MoneyFixed4" alias="money-fixed-4" lang="de"><Raw>([0-9\.]+(,[0-9]{1,4}){0,1})</Raw></Regex>
+	<Regex name="MoneyFixed3" alias="money-fixed-3" lang="de"><Raw>([0-9\.]+(,[0-9]{1,3}){0,1})</Raw></Regex>
+	<Regex name="Fractional" alias="fractional" lang="de"><Raw>([0-9\.]+(,[0-9]+){0,1})</Raw></Regex>
+</Lib>

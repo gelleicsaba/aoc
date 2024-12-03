@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Lib namespace="lib.base">
+	<Regex name="Digit"><Raw>\d</Raw></Regex>
+	<Regex name="NonDigit"><Raw>\D</Raw></Regex>
+	<Regex name="WhiteSpace"><Raw>\s</Raw></Regex>
+	<Regex name="NonWhiteSpace"><Raw>\S</Raw></Regex>
+	<Regex name="Word"><Raw>\w</Raw></Regex>
+	<Regex name="NonWord"><Raw>\W</Raw></Regex>
+	<Regex name="AnyChar"><Raw>.</Raw></Regex>
+</Lib>

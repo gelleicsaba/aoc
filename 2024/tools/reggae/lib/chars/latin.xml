@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Lib namespace="lib.chars.latin">
+	
+    <!-- Aphanumeric latin small char or underscore -->
+	<Regex name="AlphanumSmallPlus" alias="alphanum-small-plus"><Raw>[a-z0-9_-]</Raw></Regex>
+	
+    <!-- Aphanumeric latin small char -->
+	<Regex name="AlphanumSmall" alias="alphanum-small"><Raw>[a-z0-9]</Raw></Regex>
+	
+    <!-- Aphanumeric latin char or underscore -->
+	<Regex name="AlphanumPlus" alias="alphanum-plus"><Raw>[a-zA-Z0-9_-]</Raw></Regex>
+	
+    <!-- Aphanumeric latin char -->
+	<Regex name="Alphanum" alias="alphanum"><Raw>[a-zA-Z0-9]</Raw></Regex>
+	
+    <!-- Letter, latin char -->
+	<Regex name="Letter" alias="letter"><Raw>[a-zA-Z]</Raw></Regex>
+	
+    <!-- Small letter, latin char	 -->
+	<Regex name="LetterSmall" alias="letter-small"><Raw>[a-z]</Raw></Regex>
+	
+    <!-- Letter, latin char plus underscore -->
+	<Regex name="LetterPlus" alias="letter-plus"><Raw>[a-zA-Z_-]</Raw></Regex>
+	
+    <!-- Small letter, latin char plus underscore -->
+	<Regex name="LetterSmallPlus" alias="letter-small-plus"><Raw>[a-z_-]</Raw></Regex>
+
+    <!-- Capital -->
+    <Regex name="Capital" alias="capital"><Raw>[A-Z]</Raw></Regex>
+</Lib>

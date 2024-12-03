@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Pattern name="Money with locale" flags="global grouped">
+    <import name="Money" from="lib.numbers.fractional"/>
+    <!-- you can create two file from this depends on the 'lang' variable -->
+    <!-- lang can be empty string (default) OR lang can be de (comma is the fractional part separator) -->
+    <money lang="{$lang}"/>
+    <options>
+        <t>€$</t>
+    </options>
+</Pattern>

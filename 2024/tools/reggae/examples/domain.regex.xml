@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Pattern name="Domain" flags="global ci">
+	<!-- Imports -->
+    <Import name="*" from="lib.base"/>
+	<Import name="AlphanumSmallPlus, LetterSmall" from="lib.chars.latin"/>
+	<Import name="*" from="lib.chars.separators"/>
+
+	<!-- Starts with an alphanumeric char -->
+	<Group>
+		<StartsWith><AlphanumSmallPlus/></StartsWith>
+	</Group>
+	<!-- Continues with zero or more alphanumeric chars, or underscores -->
+	<Group>
+		<ZeroOrMore><AlphanumSmallPlus/></ZeroOrMore>
+	</Group>
+	<!-- Continues with dot character -->
+	<Dot/>
+	<!-- Ends with one or more letters -->
+	<Group>
+		<EndsWith>
+			<OneOrMore>
+				<LetterSmall/>
+			</OneOrMore>
+		</EndsWith>
+	</Group>
+</Pattern>

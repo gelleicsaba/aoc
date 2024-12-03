@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Lib namespace="lib.locale.de.chars">
+	<!-- Aphanumeric latin small char or underscore -->
+	<Regex name="AlphanumSmallPlus" alias="alphanum-small-plus" lang="de"><Raw>[a-z0-9_äß]</Raw></Regex>
+
+	<!-- Aphanumeric latin small char -->
+	<Regex name="AlphanumSmall" alias="alphanum-small" lang="de"><Raw>[a-z0-9äß]</Raw></Regex>
+
+	<!-- Aphanumeric latin char or underscore -->
+	<Regex name="AlphanumPlus" alias="alphanum-plus" lang="de"><Raw>[a-zA-Z0-9_äßÄ]</Raw></Regex>
+
+	<!-- Aphanumeric latin char -->
+	<Regex name="Alphanum" alias="alphanum" lang="de"><Raw>[a-zA-Z0-9äßÄ]</Raw></Regex>
+
+	<!-- Letter, latin char -->
+	<Regex name="Letter" alias="letter" lang="de"><Raw>[a-zA-ZäßÄ]</Raw></Regex>
+
+	<!-- Small letter, latin char	 -->
+    <Regex name="LetterSmall" alias="letter-small" lang="de"><Raw>[a-zäß]</Raw></Regex>
+
+	<!-- Letter, latin char plus underscore -->
+	<Regex name="LetterPlus" alias="letter-plus" lang="de"><Raw>[a-zA-Z_äßÄ]</Raw></Regex>
+
+	<!-- Small letter, latin char plus underscore -->
+	<Regex name="LetterSmallPlus" alias="letter-small-plus" lang="de"><Raw>[a-z_äß]</Raw></Regex>
+
+	<!-- Capital -->
+	<Regex name="Capital" alias="capital" lang="de"><Raw>[A-ZÄ]</Raw></Regex>
+
+</Lib>

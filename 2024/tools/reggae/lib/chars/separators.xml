@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Lib namespace="lib.chars.separators">
+	<Regex name="Dot" alias="dot"><Raw>\.</Raw></Regex>
+	<Regex name="Backslash" alias="backslash"><Raw>\\</Raw></Regex>
+	<Regex name="Slash" alias="slash"><Raw>\/</Raw></Regex>
+	<Regex name="Space" alias="space"><Raw> </Raw></Regex>
+	<Regex name="Hyphen" alias="hyphen"><Raw>\-</Raw></Regex>
+</Lib>

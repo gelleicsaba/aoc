@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Pattern name="Alternations" flags="global ci">
+    <T>th</T>
+    <Group>
+        <t>is</t>
+        <Or/>
+        <t>at</t>
+    </Group>
+</Pattern>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Pattern name="Greeting" flags="global grouped">
+    <import name="LetterSmall, Capital" from="lib.chars.latin"/>
+    <import name="*" from="lib.chars.separators"/>
+
+    <Group>
+        <!-- You can also use tags with small letters and hyphens (e.g.: <OneOrMore> ==> <one-or-more> )   -->
+        <g>
+            <t>Hello</t>
+            <or/>
+            <t>Hi</t>
+        </g>
+        <optional>
+            <g>
+                <space/>
+                <capital/>
+                <one-or-more>
+                    <letter-small/>
+                </one-or-more>
+            </g>
+        </optional>
+
+    </Group>
+
+    <t>!</t>
+
+</Pattern>

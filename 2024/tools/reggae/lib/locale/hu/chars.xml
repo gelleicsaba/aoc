@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Lib namespace="lib.locale.hu.chars">
+	<!-- Aphanumeric latin small char or underscore -->
+	<Regex name="AlphanumSmallPlus" alias="alphanum-small-plus" lang="hu"><Raw>[a-z0-9_áéíóöőúüű]</Raw></Regex>
+
+	<!-- Aphanumeric latin small char -->
+	<Regex name="AlphanumSmall" alias="alphanum-small" lang="hu"><Raw>[a-z0-9áéíóöőúüű]</Raw></Regex>
+
+	<!-- Aphanumeric latin char or underscore -->
+	<Regex name="AlphanumPlus" alias="alphanum-plus" lang="hu"><Raw>[a-zA-Z0-9_áéíóöőúüűÁÉÍÓÖŐÚÜŰ]</Raw></Regex>
+
+	<!-- Aphanumeric latin char -->
+	<Regex name="Alphanum" alias="alphanum" lang="hu"><Raw>[a-zA-Z0-9áéíóöőúüűÁÉÍÓÖŐÚÜŰ]</Raw></Regex>
+
+	<!-- Letter, latin char -->
+	<Regex name="Letter" alias="letter" lang="hu"><Raw>[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ]</Raw></Regex>
+
+	<!-- Small letter, latin char	 -->
+    <Regex name="LetterSmall" alias="letter-small" lang="hu"><Raw>[a-záéíóöőúüű]</Raw></Regex>
+
+	<!-- Letter, latin char plus underscore -->
+	<Regex name="LetterPlus" alias="letter-plus" lang="hu"><Raw>[a-zA-Z_áéíóöőúüűÁÉÍÓÖŐÚÜŰ]</Raw></Regex>
+
+	<!-- Small letter, latin char plus underscore -->
+	<Regex name="LetterSmallPlus" alias="letter-small-plus" lang="hu"><Raw>[a-z_áéíóöőúüű]</Raw></Regex>
+
+	<!-- Capital -->
+	<Regex name="Capital" alias="capital" lang="hu"><Raw>[A-ZÁÉÍÓÖŐÚÜŰ]</Raw></Regex>	
+</Lib>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Lib namespace="lib.numbers.int-numbers">
+	<Regex name="Binary" alias="binary"><Raw>([01]+)</Raw></Regex>
+	<Regex name="Binary8" alias="binary-8"><Raw>([01]{8})</Raw></Regex>
+	<Regex name="Decimal" alias="decimal"><Raw>([0-9]+)</Raw></Regex>
+    <Regex name="Hexa" alias="hexa"><Raw>([0-9A-Fa-f]+)</Raw></Regex>
+</Lib>

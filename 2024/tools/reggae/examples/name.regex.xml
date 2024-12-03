@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Pattern name="Name with locale" flags="global grouped">
+    <import name="Letter, LetterSmall, Capital" from="lib.chars.latin"/>
+    <import name="Letter, LetterSmall, Capital" from="lib.locale.de.chars"/>
+    <import name="Letter, LetterSmall, Capital" from="lib.locale.hu.chars"/>
+    <import name="*" from="lib.chars.separators"/>
+
+    <!-- title -->
+    <optional w="group">
+        <one-or-more>
+            <letter lang="{$lang}"/>
+        </one-or-more>
+        <dot/>
+        <optional>
+            <space/>
+        </optional>
+    </optional>
+
+    <!-- name -->
+    <!-- first name -->
+    <one-or-more w="group">
+        <capital/>
+        <one-or-more>
+            <letter-small lang="{$lang}"/>
+        </one-or-more>
+        <space/>
+    </one-or-more>
+    <!-- middle name, last name, other names -->
+    <one-or-more w="group">
+        <capital lang="{$lang}"/>
+        <one-or-more>
+            <letter-small lang="{$lang}"/>
+        </one-or-more>
+    </one-or-more>
+    
+</Pattern>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Pattern name="My pattern" flags="global">
+  <!-- Imports -->
+  <Import name="Decimal" from="lib.numbers.int-numbers"/>
+    <t>mul(</t>
+    <decimal/>
+    <t>,</t>
+    <decimal/>
+    <t>)</t>
+</Pattern>
