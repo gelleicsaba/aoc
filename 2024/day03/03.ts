@@ -1,7 +1,7 @@
 import { readInput } from '../lib/aoclib'
-/// came from reggae build
 // let input = readInput('./03testA.txt')
 let input = readInput('./03data.txt')
+/// came from reggae build
 const re = /mul\(([0-9]+),([0-9]+)\)/g
 const resultA = [...input.matchAll(re)].map((x)=>parseInt(x[1])*parseInt(x[2])).reduce((total,x)=>(total+x))
 console.log(`A: ${resultA}`)
