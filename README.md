@@ -2,7 +2,7 @@
 
 My solutions for [Advent of Code](https://adventofcode.com/)\
 \
-Targeted language: Typescript, Python
+Targeted language: NodeJS/Typescript, Python
 
 ### Links
 
