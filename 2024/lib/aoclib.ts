@@ -9,3 +9,5 @@ export const readInput = (filename: string): string => {
     }
     return ''
 }
+
+export const tuple=(...args)=>`(${args.join(',')})`
