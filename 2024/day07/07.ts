@@ -16,32 +16,69 @@ let maxLen = 0
 for (let row of _input) {
     const sp1 = row.split(':')
     const sp2 = sp1[1].trim().split(' ')
-    const nums: number[] = sp2.map(v=>parseInt(v))
-    eq.push({val: parseInt(sp1[0]), nums: nums })
-    if (nums.length > maxLen) {
-        maxLen = nums.length
+    const numbers: number[] = sp2.map(v=>parseInt(v))
+    eq.push({val: parseInt(sp1[0]), numbers: numbers })
+    if (numbers.length > maxLen) {
+        maxLen = numbers.length
     }
 }
-function dec2binToPad(dec: number, pad: number) {
-    return (dec >>> 0).toString(2).padStart(pad,'0');
+// converts decimal number to specific number system value in string - with specific padding to '0' -
+const numSysWithPadN = (dec: number, numSystem: number, pad: number): string => {
+    return (dec >>> 0).toString(numSystem).padStart(pad,'0');
 }
+console.log(`Calculate A...`)
 let ops: any[]=Array(maxLen)
 for (let x=1;x<maxLen;++x) {
     let arr: string[]=[]
     for (let y=0;y<Math.pow(2,x);++y) {
-        const tmp=dec2binToPad(y,x).replaceAll('0','+').replaceAll('1','*')
+        const tmp=numSysWithPadN(y,2,x).replaceAll('0','+').replaceAll('1','*')
         arr.push(tmp)
     }
     ops[x]=arr
 }
 let sum=0
+let remains: any[]=[]
 for (let e of eq) {
-    for (let op of ops[e.nums.length-1]) {
-        let t=e.nums[0]
-        for (let x=1;x<e.nums.length;++x) {
+    let good=false
+    for (let op of ops[e.numbers.length-1]) {
+        let t=e.numbers[0]
+        for (let x=1;x<e.numbers.length;++x) {
             switch (op[x-1]) {
-                case '+': t=t+e.nums[x]; break
-                case '*': t=t*e.nums[x]; break
+                case '+': t+=e.numbers[x]; break
+                case '*': t*=e.numbers[x]; break
+            }
+        }
+        if (t==e.val) {
+            good=true
+            break
+        }
+    }
+    if (good) {
+        sum+=e.val
+    } else {
+        remains.push(e)
+    }
+}
+console.log(`A: ${sum}`)
+console.log()
+console.log(`Calculate B...`)
+let ops2: any[]=Array(maxLen)
+for (let x=1;x<maxLen;++x) {
+    let arr: string[]=[]
+    for (let y=0;y<Math.pow(3,x);++y) {
+        const tmp=numSysWithPadN(y,3,x).replaceAll('0','+').replaceAll('1','*').replaceAll('2','|')
+        arr.push(tmp)
+    }
+    ops2[x]=arr
+}
+for (let e of remains) {
+    for (let op of ops2[e.numbers.length-1]) {
+        let t=e.numbers[0]
+        for (let x=1;x<e.numbers.length;++x) {
+            switch (op[x-1]) {
+                case '+': t+=e.numbers[x]; break
+                case '*': t*=e.numbers[x]; break
+                case '|': t=parseInt(`${t}${e.numbers[x]}`); break
             }
         }
         if (t==e.val) {
@@ -50,4 +87,4 @@ for (let e of eq) {
         }
     }
 }
-console.log(`A: ${sum}`)
+console.log(`B: ${sum}`)
