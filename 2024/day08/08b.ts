@@ -41,7 +41,7 @@ for (let y=0;y<m.length;++y) {
         }
     }
 }
-const antidotePos = (x1: number, y1: number, x2: number, y2: number): any[] => {
+const antinodePos = (x1: number, y1: number, x2: number, y2: number): any[] => {
     const xx=x2-x1
     const yy=y2-y1
     let ax1 = x1 - xx
@@ -70,7 +70,7 @@ for (let key in antennas) {
             if (a!=b && ab[tuple(a,b)]===undefined) {
                 const ac = coords[a]
                 const bc = coords[b]
-                const nodes=antidotePos(ac.x,ac.y,bc.x,bc.y)
+                const nodes=antinodePos(ac.x,ac.y,bc.x,bc.y)
                 for (let node of nodes) {
                     if (m[node.y][node.x]=='.') {
                         m[node.y][node.x]='#'
