@@ -1,4 +1,5 @@
 import { input } from './08data'
+import { tuple } from '../lib/aoclib'
 // const test=
 // `............
 // ........0...
@@ -66,12 +67,12 @@ for (let key in antennas) {
                     if (m[node.y][node.x]=='.') {
                         m[node.y][node.x]='#'
                     } else if (m[node.y][node.x] != '#' && m[node.y][node.x]!=key) {
-                        console.log(`overlap at (${key},${a},${b}) ${node.x},${node.y}`)
-                        plusOverlaps[`${node.x}${node.y}`]=1
+                        // console.log(`overlap at (${key},${a},${b}) ${node.x},${node.y}`)
+                        plusOverlaps[tuple(node.x,node.y)]=1
                     }
                 }
-                ab[`${a}${b}`]=1
-                ab[`${b}${a}`]=1
+                ab[tuple(a,b)]=1
+                ab[tuple(b,a)]=1
             }
         }
     }
