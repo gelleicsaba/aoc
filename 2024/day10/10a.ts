@@ -50,8 +50,8 @@ const findRoutes=(state: any)=> {
 for (let point of startPoints) {
     findRoutes({startX:point.x,startY:point.y,x:point.x,y:point.y})
 }
-let n=0
+let sum=0
 for (let key in routes) {
-    ++n
+    ++sum
 }
-console.log(n)
+console.log(`A: ${sum}`)
