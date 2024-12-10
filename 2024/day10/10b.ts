@@ -1,16 +1,15 @@
 import { input } from './10data'
 import { tuple } from '../lib/aoclib'
 const mutate = (s) => s.replaceAll("\r","").split("\n").map((v: string)=>v.split(''))
-// const test4 =
-// `89010123
-// 78121874
-// 87430965
-// 96549874
-// 45678903
-// 32019012
-// 01329801
-// 10456732`
-// const m: any[][] = mutate(test4)
+// const test1 =
+// `.....0.
+// ..4321.
+// ..5..2.
+// ..6543.
+// ..7..4.
+// ..8765.
+// ..9....`
+// const m: any[][] = mutate(test1)
 const m: any[][] = mutate(input)
 const startPoints: any[]=[]
 for (let y=0;y<m.length;++y) {
@@ -30,25 +29,27 @@ let routes: any={}
 const findRoutes=(state: any)=> {
     let x=state.x
     let y=state.y
+    let steps=state.steps
+    steps.push(tuple(x,y))
     if (m[y][x]=='9') {
-        routes[tuple(state.startX,state.startY,x,y)]=1
+        routes[steps.join('')]=1
         return
     }
     if (y>0&&checkOneStep(x,y,0,-1)) {
-        findRoutes({startX:state.startX,startY:state.startY,x:x,y:y-1})
+        findRoutes({startX:state.startX,startY:state.startY,x:x,y:y-1,steps})
     }
     if (y<m.length-1&&checkOneStep(x,y,0,+1)) {
-        findRoutes({startX:state.startX,startY:state.startY,x:x,y:y+1})
+        findRoutes({startX:state.startX,startY:state.startY,x:x,y:y+1,steps})
     }
     if (x>0&&checkOneStep(x,y,-1,0)) {
-        findRoutes({startX:state.startX,startY:state.startY,x:x-1,y:y})
+        findRoutes({startX:state.startX,startY:state.startY,x:x-1,y:y,steps})
     }
     if (x<m[0].length-1&&checkOneStep(x,y,+1,0)) {
-        findRoutes({startX:state.startX,startY:state.startY,x:x+1,y:y})
+        findRoutes({startX:state.startX,startY:state.startY,x:x+1,y:y,steps})
     }
 }
 for (let point of startPoints) {
-    findRoutes({startX:point.x,startY:point.y,x:point.x,y:point.y})
+    findRoutes({startX:point.x,startY:point.y,x:point.x,y:point.y,steps:[]})
 }
 let n=0
 for (let key in routes) {
