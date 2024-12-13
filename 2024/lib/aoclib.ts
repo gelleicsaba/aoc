@@ -25,3 +25,7 @@ export const permutations = (arr: any[]) => {
         []
     )
 }
+
+export const tupleToArray=(s:string,mapFunc?: Function)=>
+    mapFunc ? s.substring(1,s.length-1).split(',').map(v=>mapFunc(v))
+        : s.substring(1,s.length-1).split(',')
