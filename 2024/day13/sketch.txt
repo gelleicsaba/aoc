@@ -19,7 +19,7 @@ this will be the equation
 (94×34) (22×34) | (8400×34)
 (94×34) (67×94) | (5400×94)
 
-2. subtract 2.column & the equation right side values
+2. subtract 2.column values & the equation right side values
 
 (22×34)b - (67×94)b = (8400×34 - 5400×94)
 
