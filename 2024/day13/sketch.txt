@@ -1,0 +1,34 @@
+Example 2.
+
+Button A: X+94, Y+34
+Button B: X+22, Y+67
+Prize: X=8400, Y=5400
+
+
+94a + 22b = 8400
+34a + 67b = 5400
+=====================
+
+this will be the equation
+
+94 22 | 8400
+34 67 | 5400
+
+(1.) we must multiply 1.row × 34 (the 2.row,1.column value) and 2.row × 94 (the 1.row,1.column value)
+
+(94×34) (22×34) | (8400×34)
+(94×34) (67×94) | (5400×94)
+
+2. subtract 2.column & the equation right side values
+
+(22×34)b - (67×94)b = (8400×34 - 5400×94)
+
+−5550b = −222000
+
+Then: b=40
+
+3. a can be calculated from the 1st equation
+ a = (8400 - 22×40) / 94 = 80
+
+Finally: A must be pushed 80x
+         B must be pushed 40x
