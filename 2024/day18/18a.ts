@@ -1,11 +1,7 @@
 export {}
-import { input, test } from './18data'
+import { input } from './18data'
 import { tuple } from '../lib/aoclib'
 const mutate=(s:string)=>s.replaceAll("\r","").split("\n").map(v=>v.split(',').map(q=>parseInt(q)))
-// const WIDTH=7
-// const HEIGHT=7
-// const LIMIT=12
-// const _input=mutate(test)
 const WIDTH=71
 const HEIGHT=71
 const LIMIT=1024

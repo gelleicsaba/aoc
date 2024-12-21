@@ -41,3 +41,14 @@ export const xor=(b:number,c:number):number=>{
     }
     return d
 }
+
+export const searchAll=(str:string,w:string)=>{
+    let regex = new RegExp(w, 'gi')
+    let result:RegExpExecArray|null
+    let indices: number[] = [];
+    while ( (result = regex.exec(str)) ) {
+        indices.push(result.index)
+    }
+    return indices
+}
+
