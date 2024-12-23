@@ -9,90 +9,23 @@ const mutate=(s:string):string[]=>s.replaceAll("\r","").split("\n")
 
 // rrbgbr`
 // const _input=mutate(test)
-console.log("DON'T FORGET!")
-console.log("REMOVE THE 'validInputs.json' IF YOUR INPUT HAS CHANGED!!!\n")
-const _input=mutate(input)
-const samples=_input[0].split(',').map(v=>v.trim())
-let towels: string[]=[]
-for (let x=2;x<_input.length;++x) {
-    towels.push(_input[x])
-}
-
-let validTowels:string[]=[]
-let currentTowel=""
-let currentLen=0
-let solutionResult=false
-let currentSamples:string[]=[]
-let currentSampleCache: any[]=[]
-let calls=0
-const findSolution=(startIdx: number)=>{
-    ++calls
-    for (let x of currentSampleCache[startIdx]) {
-        if (x.length==0) continue
-        if (solutionResult || calls>500000000) return
-        if (startIdx+x.length==currentLen)
-        {
-            solutionResult=true
-            return
-        }
-        findSolution(startIdx+x.length)
-    }
-}
-let samplesMaxLen=0
-for (let x=0;x<samples.length;++x) {
-    if (samples[x].length>samplesMaxLen) {
-        samplesMaxLen=samples[x].length
-    }
-}
 
 if (!existFile(VALID_INPUTS_FILE)) {
-    let currentTowelCache: any[]=[]
-    for (let x=0;x<towels.length;++x) {
-        process.stdout.write(`${x}..`)
-        solutionResult=false
-        currentTowel=towels[x]
-        currentLen=towels[x].length
-        currentSamples=samples.filter(q=>currentTowel.includes(q))
-        currentTowelCache=[]
-        for (let r=0;r<currentLen;++r) {
-            let tmp: string[]=[]
-            tmp.push('')
-            for (let q=0;q<samplesMaxLen;++q) {
-                if (r+q<=currentLen) {
-                    tmp.push(currentTowel.substring(r,r+q+1))
-                }
-            }
-            currentTowelCache.push(tmp)
-        }
-        currentSampleCache=Array(currentLen)
-        for (let r=0;r<currentLen;++r) {
-            currentSampleCache[r]=[]
-            for (let sample of currentSamples) {
-                if (r+sample.length<=currentLen &&
-                    currentTowelCache[r][sample.length]==sample)
-                {
-                    currentSampleCache[r].push(sample)
-                }
-            }
-        }
-        calls=0
-        findSolution(0)
-        process.stdout.write(`(${solutionResult})  `)
-        if (solutionResult) {
-            validTowels.push(currentTowel)
-        }
-    }
-    writeObjToFile(VALID_INPUTS_FILE, validTowels)
-} else {
-    console.log(`FOUND '${VALID_INPUTS_FILE}'. READ VALID INPUTS FROM THAT FILE.`)
-    validTowels=readObjFromFile(VALID_INPUTS_FILE)
+    console.log("THE 'validInputs.json' DOESN'T EXIST!")
+    console.log("RUN THE '19a.ts' (TASK A) TO GET VALID INPUTS!")
+    process.exit(0)
 }
-// process.exit(0)
-towels=validTowels
+const _input=mutate(input)
+let samples: string[]=[]
+let towels: string[]=[]
 
+const result19a:any=readObjFromFile(VALID_INPUTS_FILE)
+towels=result19a.towels
+samples=result19a.samples
+
+let _samples:string[]=[]
 let scores={}
 let cache={}
-let _samples:string[]=[]
 const _build=(s:string, nodes:string[])=>{
     if (cache[s]) {
         for (let x of nodes) {
@@ -130,6 +63,9 @@ for (let x=0;x<towels.length;++x) {
     sum+=scores[towels[x]]
     console.log(`  ${x}: ${scores[towels[x]]}`)
 }
+console.log("DON'T FORGET!")
+console.log("IF YOUR INPUT HAS CHANGED, RUN TASK A (19a.ts) AGAIN!!!\n")
+console.log()
 console.log(`B: ${sum}`)
 
 
