@@ -10,6 +10,18 @@ export const readInput = (filename: string): string => {
     return ''
 }
 
+export const writeObjToFile=(filename: string, obj: any)=>{
+    fs.writeFileSync(filename, JSON.stringify(obj));
+}
+export const readObjFromFile=(filename: string): any=>{
+    const content=readInput(filename)
+    return JSON.parse(content)
+}
+export const existFile=(filename: string): boolean=>{
+    return fs.existsSync(filename)
+}
+
+
 export const tuple=(...args)=>`(${args.join(',')})`
 
 export const permutations = (arr: any[]) => {
