@@ -2,14 +2,14 @@
 
 My solutions for [Advent of Code](https://adventofcode.com/)\
 \
-Targeted language: NodeJS/Typescript
+Targeted language: NodeJS/Typescript or Python
 
 ### Links
 
 Here are the repos of some of my friends:
 
 * JabbaLaci: [https://github.com/jabbalaci/AdventOfCode2025](https://github.com/jabbalaci/AdventOfCode2025)
-* Mocsa: [https://github.com/Mocsa1974/AoC2024](https://github.com/Mocsa1974)
+* Mocsa: [https://github.com/Mocsa1974/AoC-2025](https://github.com/Mocsa1974/AoC-2025)
 
 ### Launch programs
 
@@ -32,4 +32,9 @@ Or you can use in linux:
 ./runA.sh
 
 ./runB.sh
+```
+Or
+
+```
+python3 <filename.py>
 ```
