@@ -65,6 +65,5 @@ for f in freshIngredients:
 freshIngredients = clearedArray
 result = 0
 for f in freshIngredients:
-    if f[FROM] != DELETED:
-        result = result + ((f[TO] - f[FROM]) + 1)
+    result = result + ((f[TO] - f[FROM]) + 1)
 print(result)
