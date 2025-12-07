@@ -29,8 +29,6 @@ The total output joltage is the sum of the maximum joltage from each bank, so in
 There are many batteries in front of you. Find the maximum joltage possible from each bank; what is the total output joltage?
 
 Your puzzle answer was 17100.
-
-The first half of this puzzle is complete! It provides one gold star: *
 --- Part Two ---
 
 The escalator doesn't move. The Elf explains that it probably needs more joltage to overcome the static friction of the system and hits the big red "joltage limit safety override" button. You lose count of the number of times she needs to confirm "yes, I'm sure" and decorate the lobby a bit while you wait.
@@ -57,8 +55,12 @@ The total output joltage is now much larger: 987654321111 + 811111111119 + 43423
 
 What is the new total output joltage?
 
-Answer:
+Your puzzle answer was 170418192256861.
 
-Although it hasn't changed, you can still get your puzzle input.
+Both parts of this puzzle are complete! They provide two gold stars: **
+
+At this point, you should return to your Advent calendar and try another puzzle.
+
+If you still want to see it, you can get your puzzle input.
 
 You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
