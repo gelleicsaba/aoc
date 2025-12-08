@@ -11,5 +11,5 @@ for r in range(len(m)-2):
         elif m[r][t] == '|' and m[r+1][t] == '^':
             m[r+1][t-1] = '|'
             m[r+1][t+1] = '|'
-            splitNum = splitNum + 1
+            splitNum += 1
 print(splitNum)
