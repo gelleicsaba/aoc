@@ -6,9 +6,7 @@ for row in textContent.split("\n"):
 splitNum = 0
 for r in range(len(m)-2):
     for t in range(len(m[0])):
-        if m[r][t] == 'S':
-            m[r+1][t] = '|'
-        elif m[r][t] == '|' and m[r+1][t] == '.':
+        if (m[r][t] == 'S' or m[r][t] == '|') and m[r+1][t] == '.':
             m[r+1][t] = '|'
         elif m[r][t] == '|' and m[r+1][t] == '^':
             m[r+1][t-1] = '|'
